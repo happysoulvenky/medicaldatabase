@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button-container {
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  z-index: 9999; /* Ensure buttons are above other content */
+}
+.button-container button {
+  margin-bottom: 10px; /* Adjust spacing between buttons */
+  padding: 10px 20px;
+  background-color: #007bff; /* Adjust button color */
+  color: #fff; /* Adjust text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button-container button:hover {
+  background-color: #0056b3; /* Adjust button hover color */
+}
+</style>
+</head>
+<body>
+
+<div class="button-container">
+  <button id="button1" onclick="navigateTo('hospitals.html')">Hospitals</button>
+  <button id="button2" onclick="navigateTo('public.html')">Public</button>
+</div>
+
+<script>
+function navigateTo(page) {
+  window.location.href = page; // Navigate to the specified page
+}
+</script>
+
+</body>
+</html>

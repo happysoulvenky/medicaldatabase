@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Display</title>
+</head>
+<body>
+    <h1>Data from MySQL Database</h1>
+    <form method="post" action = " ">
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Hospital name</th>
+            <th>Complaints</th>
+            <th>Diagnose</th>
+            <th>Drugprescription</th>
+            <th>Testreport</th>
+            <!-- Add more columns as needed -->
+        </tr>
+        {% for row in data %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2]  }}</td>
+                <td>{{ row[3]  }}</td>
+                <td>{{ row[4]  }}</td>
+                <td>{{ row[5]  }}</td>
+                <td>{{ row[6]}}</td>
+                <!-- Add more columns as needed -->
+            </tr>
+        {% endfor %}
+    </table>
+    </form>
+</body>
+</html>

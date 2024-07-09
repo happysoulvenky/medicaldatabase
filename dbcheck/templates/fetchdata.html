@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Data Input</title>
+    <link rel="stylesheet" href="{{url_for('static', filename ='sp.css')}}">
+</head>
+
+
+<body>
+    <h1>Fetch User data</h1>
+    <button class="btnn"><a href="/medidata">Inputdata</a></button>
+    <form method="post"  class="Fetch">
+        
+        <label for="ID">ID:</label>
+        <input type="text"name="ID"><br>
+
+        <button type="submit">Submit</button>
+
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Hospital name</th>
+                <th>Complaints</th>
+                <th>Diagnose</th>
+                <th>Drugprescription</th>
+                <th>filename</th>
+                <!-- Add more columns as needed -->
+            </tr>
+            {% for row in data %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2]  }}</td>
+                    <td>{{ row[3]  }}</td>
+                    <td>{{ row[4]  }}</td>
+                    <td>{{ row[5]  }}</td>
+                    <td>{% if row[6] %}
+                        <a href="{{ url_for('uploaded_file', filename=row[6]) }}">Open</a>
+                    {% else %}
+                        No file available
+                    {% endif %}
+                    </td>
+                    <!-- Add more columns as needed -->
+                </tr>
+            {% endfor %}
+        </table>
+    </form>
+</body>
+</html>

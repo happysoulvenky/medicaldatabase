@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles11.css">
+    <title>Medical Data Form</title>
+</head>
+<body>
+    <h1>Medical Data Form</h1>
+    <form action="{{ url_for('submit') }}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" required>
+
+        <label for="blood_type">Blood Type:</label>
+        <input type="text" name="blood_type" required>
+
+        <!-- Add more input fields for other medical data as needed -->
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+

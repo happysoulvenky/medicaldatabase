@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Data Input</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'inputstyle.css')}}">
+</head>
+<body>
+
+    <h1>Medical Data Input</h1>
+    <button class="btnn"><a href="/specifieddata">Viewdata</a></button>
+    
+    <form method="post" enctype="multipart/form-data">
+        <label for="ID">ID:</label>
+        <input type="text" name="ID" required><br>
+
+        <label for="Date">Date:</label>
+        <input type="date" name="Date" required><br>
+        
+        <label for="Hospitalname">Hospitalname:</label>
+        <input type="text" name="Hospitalname" required><br>
+
+        <label for="Complaints">Complaints:</label>
+        <input type="text" name="Complaints" required><br>
+
+        <label for="Diagnose">Diagnose:</label>
+        <input type="text" name="Diagnose" required><br>
+
+        <label for="Drugprescription">Drugprescription:</label>
+        <input type="text" name="Drugprescription" required><br>
+
+        <label for = "file">filename:</label>
+        <input type="file" name="file">
+        
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

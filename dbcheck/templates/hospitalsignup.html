@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static' ,filename='styles.css')}}">
+    <title>Signup Page</title>
+</head>
+<body>
+    <div class="container"> 
+        <form method="post" action = " " class="signup-form">
+            <h2>Sign Up</h2>
+            <label for="Hospitalname">Hospitalname</label>
+            <input type="text" id="Hospitalname" name="Hospitalname" required>
+            
+            <label for="mobilenumber">mobilenumber:</label>
+            <input type="tel" id="mobilenumber" name="mobilenumber" pattern="[0-9]{10}"required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">address</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+</body>
+</html>
